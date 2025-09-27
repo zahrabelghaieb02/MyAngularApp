@@ -1,0 +1,84 @@
+<!-- Section Hero -->
+<section class="bg-light py-5 text-center">
+    <div class="container">
+        <h1 class="display-5 fw-bold">Bienvenue sur EventHub</h1>
+        <p class="lead text-muted mt-3">
+            La plateforme pour créer, gérer et participer à vos événements préférés.<br>
+            Réservez vos tickets en ligne et partagez vos retours en toute simplicité.
+        </p>
+        <div class="mt-4">
+            <a href="/events" class="btn btn-primary btn-lg">Découvrir les événements</a>
+            <a href="/auth/register" class="btn btn-outline-secondary btn-lg ms-2">Créer un compte</a>
+        </div>
+    </div>
+</section>
+<section class="container py-5">
+    <div class="container py-4">
+    <h2 class="mb-3">Liste des événements</h2>
+
+    <!-- Recherche -->
+    <input type="text" class="form-control mb-4"
+           placeholder="Rechercher un événement">
+
+    <div class="row g-3">
+        <div class="col-md-4"  *ngFor="let event of EVENTS">
+            <div class="card h-100 shadow-sm">
+                <img src="{{event.imageUrl}}" 
+                     class="card-img-top img-fluid"
+                     style="height: 200px; object-fit: cover;">
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ event.titre }}</h5>
+                    <p class="text-muted">{{ event.date }}</p>
+                    <p>{{ event.description }}</p>
+                    <p class="fw-bold">{{ event.prix  }}</p>
+                    <p>{{ event.lieu }}</p>
+
+                    <!-- Bouton Like -->
+                    <button class="btn btn-sm btn-primary" >
+                        👍 Like
+                    </button>
+                    <span class="ms-2">{{ event.nbrLikes }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Section Features
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/ticket.png" class="card-img-top" alt="Tickets">
+                <div class="card-body">
+                    <h5 class="card-title">Achetez vos tickets</h5>
+                    <p class="card-text">Réservez en quelques clics, rapidement et en toute sécurité.</p>
+                    <a href="/tickets" class="btn btn-primary btn-sm">Mes Tickets</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/event.png" class="card-img-top" alt="Événements">
+                <div class="card-body">
+                    <h5 class="card-title">Organisez vos événements</h5>
+                    <p class="card-text">Publiez, gérez et suivez vos ventes facilement grâce à EventHub.</p>
+                    <a href="/events" class="btn btn-outline-primary btn-sm">Voir les événements</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/feedback.png" class="card-img-top" alt="Feedback">
+                <div class="card-body">
+                    <h5 class="card-title">Partagez votre avis</h5>
+                    <p class="card-text">Aidez la communauté en donnant vos feedbacks et notes.</p>
+                    <a href="/feedback" class="btn btn-outline-secondary btn-sm">Donner un feedback</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     -->
+</section>
