@@ -12,11 +12,11 @@ EVENTS: Event[] = [
     id: 1,
     titre: "Concert Jazz",
     description: "Un concert exceptionnel avec des artistes internationaux.",
-    date: new Date("2025-10-15T20:00:00"),
+    date: new Date("2024-10-15T20:00:00"),
     lieu: "Théâtre Municipal",
     prix: 50,
     organisateurId: 101,
-    imageUrl: "assets/images/jazz.jpg",
+    imageUrl: "images/event.png",
     nbPlaces: 200,
     nbrLikes: 35
   },
@@ -28,7 +28,7 @@ EVENTS: Event[] = [
     lieu: "Centre de Congrès",
     prix: 0, // gratuit
     organisateurId: 102,
-    imageUrl: "assets/images/ai_conf.jpg",
+    imageUrl: "images/event.png",
     nbPlaces: 500,
     nbrLikes: 120
   },
@@ -40,8 +40,8 @@ EVENTS: Event[] = [
     lieu: "Espace Culturel",
     prix: 25,
     organisateurId: 103,
-    imageUrl: "assets/images/cuisine.jpg",
-    nbPlaces: 30,
+    imageUrl: "images/event.png",
+    nbPlaces: 0,
     nbrLikes: 48
   },
   {
@@ -52,9 +52,21 @@ EVENTS: Event[] = [
     lieu: "Carthage",
     prix: 10,
     organisateurId: 104,
-    imageUrl: "assets/images/marathon.jpg",
+    imageUrl: "images/event.png",
     nbPlaces: 1000,
     nbrLikes: 300
   }
 ];
+inclikes(event:Event
+){
+ 
+  return event.nbrLikes++;
+  
+}
+  Buy(event:Event){
+    event.nbPlaces--;
+}
+dateExpire(event:Event):boolean{
+  return event.date < new Date();
+}
 }

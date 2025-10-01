@@ -6,45 +6,15 @@
             La plateforme pour créer, gérer et participer à vos événements préférés.<br>
             Réservez vos tickets en ligne et partagez vos retours en toute simplicité.
         </p>
-        <div class="mt-4">
-            <a href="/events" class="btn btn-primary btn-lg">Découvrir les événements</a>
-            <a href="/auth/register" class="btn btn-outline-secondary btn-lg ms-2">Créer un compte</a>
-        </div>
+         <div class="mt-4">
+      <a routerLink="/events" class="btn btn-primary btn-lg">Découvrir les événements</a>
+      <a routerLink="/auth/register" class="btn btn-outline-secondary btn-lg ms-2">Créer un compte</a>
+    </div>
     </div>
 </section>
 <section class="container py-5">
-    <div class="container py-4">
-    <h2 class="mb-3">Liste des événements</h2>
-
-    <!-- Recherche -->
-    <input type="text" class="form-control mb-4"
-           placeholder="Rechercher un événement">
-
-    <div class="row g-3">
-        <div class="col-md-4"  *ngFor="let event of EVENTS">
-            <div class="card h-100 shadow-sm">
-                <img src="{{event.imageUrl}}" 
-                     class="card-img-top img-fluid"
-                     style="height: 200px; object-fit: cover;">
-
-                <div class="card-body">
-                    <h5 class="card-title">{{ event.titre }}</h5>
-                    <p class="text-muted">{{ event.date }}</p>
-                    <p>{{ event.description }}</p>
-                    <p class="fw-bold">{{ event.prix  }}</p>
-                    <p>{{ event.lieu }}</p>
-
-                    <!-- Bouton Like -->
-                    <button class="btn btn-sm btn-primary" >
-                        👍 Like
-                    </button>
-                    <span class="ms-2">{{ event.nbrLikes }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Section Features
+    
+<!-- Section Features -->
 
     <div class="row g-4">
         <div class="col-md-4">
@@ -79,6 +49,5 @@
                 </div>
             </div>
         </div>
-    </div>
-     -->
+    </div>   
 </section>
