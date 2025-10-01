@@ -3,7 +3,7 @@ import { Event } from '../../models/event';
 
 @Component({
   selector: 'app-list-event',
-  template: '<h2>Liste des événements</h2>',
+  templateUrl: './list-event.component.html' ,
   styleUrl: './list-event.component.css'
 })
 export class ListEventComponent {
