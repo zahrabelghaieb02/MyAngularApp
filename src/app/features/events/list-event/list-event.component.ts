@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Event } from '../../models/event';
+import { Event } from '../../../models/event';
 
 @Component({
   selector: 'app-list-event',
@@ -7,6 +7,8 @@ import { Event } from '../../models/event';
   styleUrl: './list-event.component.css'
 })
 export class ListEventComponent {
+  searchItem: string = '';
+
 EVENTS: Event[] = [
   {
     id: 1,
@@ -69,4 +71,9 @@ inclikes(event:Event
 dateExpire(event:Event):boolean{
   return event.date < new Date();
 }
+filter(){
+return this.EVENTS.filter(event => event.titre.toLowerCase().includes(this.searchItem.toLowerCase()));
+
 }
+}
+
