@@ -1,4 +1,5 @@
 export interface Event {
+
     id:number;
     titre:string;
     description:string;
@@ -8,5 +9,7 @@ export interface Event {
     organisateurId:number;
     imageUrl:string;
     nbPlaces:number;
-    nbrLikes:number;   
-}
+    nbrLikes:number;
+
+
+} 

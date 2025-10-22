@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Event } from '../../../models/event';
 
 @Component({
   selector: 'app-list-event',
-  templateUrl: './list-event.component.html' ,
-  styleUrl: './list-event.component.css'
+  templateUrl: './list-event.component.html',
+  styleUrls: ['./list-event.component.css']
 })
 export class ListEventComponent {
-  searchItem: string = '';
-
-EVENTS: Event[] = [
+  searchItem =""
+  listevent: Event[] = [
   {
     id: 1,
     titre: "Concert Jazz",
@@ -43,7 +42,7 @@ EVENTS: Event[] = [
     prix: 25,
     organisateurId: 103,
     imageUrl: "images/event.png",
-    nbPlaces: 0,
+    nbPlaces: 5,
     nbrLikes: 48
   },
   {
@@ -59,21 +58,35 @@ EVENTS: Event[] = [
     nbrLikes: 300
   }
 ];
-inclikes(event:Event
-){
- 
-  return event.nbrLikes++;
+
+incrLikes (event:Event) {
+  return event.nbrLikes++
+}
+
+buyTicket (event:Event ) {
+  return event.nbPlaces--
+
+}
+
+isExpired (event: Event) {
+ return new Date (event.date) < new Date();
   
 }
-  Buy(event:Event){
-    event.nbPlaces--;
-}
-dateExpire(event:Event):boolean{
-  return event.date < new Date();
-}
-filter(){
-return this.EVENTS.filter(event => event.titre.toLowerCase().includes(this.searchItem.toLowerCase()));
 
-}
+filter()
+{
+return this.listevent.filter(eventItem=>eventItem.titre.toLowerCase().includes(this.searchItem.toLowerCase()));
+// eventItem.lieu.toLowerCase().includes(this.searchItem.toLowerCase())
 }
 
+
+
+
+
+
+
+
+
+
+
+}
