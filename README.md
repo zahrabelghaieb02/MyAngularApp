@@ -1,27 +1,99 @@
-# Project1
+# Projet Académique Angular - Gestion d'Événements
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.21.
+## 📚 Contexte Académique
 
-## Development server
+Ce projet a été développé dans le cadre d'un projet académique encadré par **Madame Emnarbii**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+L'objectif de ce projet est d'apprendre et de maîtriser les concepts fondamentaux d'Angular à travers la création d'une application de gestion d'événements.
 
-## Code scaffolding
+## 🎯 Objectifs Pédagogiques
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Maîtriser l'architecture des composants Angular
+- Comprendre le système de routage d'Angular
+- Implémenter la liaison de données bidirectionnelle (Two-way data binding)
+- Utiliser les services et l'injection de dépendances
+- Gérer les formulaires et la validation
+- Créer une interface utilisateur responsive avec Bootstrap
 
-## Build
+## 🚀 Fonctionnalités de l'Application
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Gestion d'événements** : Affichage, recherche et filtrage d'événements
+- **Système de navigation** : Routage entre différentes pages
+- **Interface responsive** : Compatible mobile et desktop
+- **Interactions utilisateur** : Système de likes et d'achat de billets
 
-## Running unit tests
+## 💻 Technologies Utilisées
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Angular 18.2.21** - Framework principal
+- **TypeScript** - Langage de programmation
+- **Bootstrap** - Framework CSS pour le design
+- **Angular Router** - Gestion de la navigation
+- **Angular Forms** - Gestion des formulaires
 
-## Running end-to-end tests
+## 🛠️ Installation et Démarrage
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Prérequis
+- Node.js (version 18 ou supérieure)
+- npm (gestionnaire de paquets)
+- Angular CLI
 
-## Further help
+### Installation
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Serveur de développement
+```bash
+ng serve
+```
+Naviguez vers `http://localhost:4200/`. L'application se rechargera automatiquement si vous modifiez des fichiers source.
+
+## 📁 Structure du Projet
+
+```
+src/
+├── app/
+│   ├── features/
+│   │   ├── events/           # Module des événements
+│   │   └── tickets/          # Module des billets
+│   ├── layout/               # Composants de mise en page
+│   │   ├── header/
+│   │   ├── footer/
+│   │   ├── home/
+│   │   └── not-found/
+│   ├── models/               # Modèles de données
+│   └── shared/               # Services partagés
+└── assets/                   # Ressources statiques
+```
+
+## 🔧 Scripts Disponibles
+
+- `ng serve` - Démarre le serveur de développement
+- `ng build` - Compile le projet
+- `ng test` - Exécute les tests unitaires
+- `ng lint` - Analyse la qualité du code
+
+## 📖 Concepts Angular Abordés
+
+1. **Composants** - Création et gestion des composants
+2. **Services** - Injection de dépendances et services
+3. **Routage** - Navigation entre les pages
+4. **Directives** - *ngFor, *ngIf, etc.
+5. **Pipes** - Transformation des données
+6. **Formulaires** - Template-driven et reactive forms
+7. **Modules** - Organisation modulaire de l'application
+
+## 👥 Équipe
+
+**Encadrant :** Madame Emnarbii  
+**Développeur :** [Votre nom]
+
+## 📚 Ressources d'Apprentissage
+
+- [Documentation Angular](https://angular.dev/)
+- [Angular CLI](https://github.com/angular/angular-cli)
+- [Bootstrap Documentation](https://getbootstrap.com/)
+
+---
+
+*Projet réalisé dans un contexte pédagogique - [Année académique 2024-2025]*
