@@ -8,6 +8,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './layout/home/home.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
+import { PipesPipe } from './shared/pipes/pipes.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PipesPipe,
+    
   ],
   imports: [
     BrowserModule,

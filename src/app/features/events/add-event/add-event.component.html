@@ -1,0 +1,113 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Ajouter un Événement</h2>
+
+  <form [formGroup]="eventform" (ngSubmit)="onSubmit()">
+
+    <!-- Ligne 1: Titre et Date -->
+    <div class="form-row">
+      
+      <div class="col-md-6 mb-3">
+        <label for="titre">Titre de l'événement *</label>
+        <input type="text" class="form-control" id="titre" formControlName="titre" placeholder="Entrez le titre"
+          required>
+        <div *ngIf="titre?.invalid && titre?.touched">
+
+
+          <span *ngIf="eventform.get('titre')?.hasError('required')" style="color:crimson;">Le titre est requis.</span>
+
+
+          <span *ngIf="eventform.get('titre')?.hasError('minlength')">Le titre doit contenir au moins 5
+            caractères.</span>
+
+          <span *ngIf="eventform.get('titre')?.errors?.['pattern']">Le titre ne peut contenir que des lettres.</span>
+
+        </div>
+      </div>
+
+
+       <div class="col-md-6 mb-3">
+        <label for="id">ID *</label>
+        <input type="text" class="form-control" id="id" formControlName="id" required>
+        <div *ngIf="id?.invalid && id?.touched">
+
+
+          <span *ngIf="eventform.get('id')?.hasError('required')" style="color:crimson;">L'ID est requis.</span>
+          </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="date">Date *</label>
+        <input type="date" class="form-control" id="date" formControlName="date" required>
+        
+        
+      </div>
+    </div>
+
+    <!-- Ligne 2: Lieu et Description -->
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="lieu">Lieu *</label>
+        <input type="text" class="form-control" id="lieu" formControlName="lieu" placeholder="Ville ou adresse"
+          required>
+        <div *ngIf="lieu?.invalid && lieu?.touched">
+          <span *ngIf="eventform.get('lieu')?.hasError('required')" style="color:crimson;">Le lieu est requis.</span>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" formControlName="description" rows="3"
+          placeholder="Décrivez votre événement..."></textarea>
+        <div *ngIf="description?.invalid && description?.touched">
+          <span *ngIf="eventform.get('description')?.hasError('minlength')" style="color:crimson;">La description
+            doit dépasser 30 caractères.</span>
+          <span *ngIf="eventform.get('description')?.hasError('required')" style="color:crimson;">La description est requise.</span>
+          </div>
+      </div>
+    </div>
+
+    <!-- Ligne 3: Prix et Nombre de places -->
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="prix">Prix (DT) *</label>
+        <input type="number" class="form-control" id="prix" formControlName="prix" placeholder="0" required>
+      <div *ngIf="prix?.invalid && prix?.touched">
+          <span *ngIf="eventform.get('prix')?.hasError('required')" style="color:crimson;">Le prix est requis.</span>
+          <span *ngIf="eventform.get('prix')?.hasError('^pattern')">Le prix doit être supérieur ou égal à 0.</span>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="nbPlaces">Nombre de places *</label>
+        <input type="number" class="form-control" id="nbPlaces" formControlName="nbPlaces" placeholder="0" required>
+        <div *ngIf="nbPlaces?.invalid && nbPlaces?.touched">
+          <span *ngIf="eventform.get('nbPlaces')?.hasError('required')" style="color:crimson;">Le nombre de places est requis.</span>
+          <span *ngIf="eventform.get('nbPlaces')?.hasError('pattern')">Le nombre de places doit être supérieur à 0.</span>
+      </div>
+    </div>
+    </div>
+    <!-- Ligne 4: Image URL et Organizer ID -->
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="imageUrl">URL de l'image</label>
+        <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl"
+          placeholder="https://example.com/image.jpg">
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="organizerId">ID Organisateur</label>
+        <input type="text" class="form-control" id="organizerId" formControlName="organizerId" placeholder="ID">
+        <div *ngIf="organizerId?.invalid && organizerId?.touched">
+          <span *ngIf="eventform.get('organizerId')?.hasError('required')" style="color:crimson;">L'ID de l'organisateur est requis.</span> 
+          <span *ngIf="eventform.get('organizerId')?.hasError('pattern')">L'ID de l'organisateur doit être un nombre.</span>
+      </div>
+    </div>
+      </div>
+
+    <!-- Boutons -->
+    <div class="form-group mt-4">
+      <button class="btn btn-primary" type="submit" [disabled]="eventform.invalid">
+        Ajouter l'événement
+      </button>
+      <button class="btn btn-secondary ml-2" type="button" (click)="onReset()">
+        Réinitialiser
+      </button>
+    </div>
+  </form>
+</div>

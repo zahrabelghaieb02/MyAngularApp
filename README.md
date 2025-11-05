@@ -1,8 +1,8 @@
-# Projet Académique Angular - Gestion d'Événements
+# Projet Académique Angular  - Gestion d'Événements
 
 ## 📚 Contexte Académique
 
-Ce projet a été développé dans le cadre d'un projet académique encadré par **Madame Emnarbii**.
+Ce projet a été développé dans le cadre d'un projet académique encadré par **Madame Emna RBII**.
 
 L'objectif de ce projet est d'apprendre et de maîtriser les concepts fondamentaux d'Angular à travers la création d'une application de gestion d'événements.
 
@@ -85,8 +85,8 @@ src/
 
 ## 👥 Équipe
 
-**Encadrant :** Madame Emnarbii  
-**Développeur :** [Votre nom]
+**Encadrant :** Madame Emna Rbii  
+**Développeur :** Smail Chemlali 
 
 ## 📚 Ressources d'Apprentissage
 
@@ -96,4 +96,4 @@ src/
 
 ---
 
-*Projet réalisé dans un contexte pédagogique - [Année académique 2024-2025]*
+*Projet réalisé dans un contexte pédagogique - [Année académique 2025-2026]*
