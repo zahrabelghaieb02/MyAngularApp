@@ -1,4 +1,5 @@
-# Projet Académique Angular  - Gestion d'Événements
+# Projet Académique Angular  - Gestion d'Événements  Smail Chemlali
+
 
 ## 📚 Contexte Académique
 
