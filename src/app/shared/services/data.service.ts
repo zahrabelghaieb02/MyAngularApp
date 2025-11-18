@@ -65,4 +65,7 @@ export class DataService {
   getEventList(): Event[] {
     return this.listevent;
   }
+    addEvent(event:any){
+    return this.listevent.push(event);
+  }
 }

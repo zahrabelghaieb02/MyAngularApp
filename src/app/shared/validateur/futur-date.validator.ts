@@ -7,7 +7,8 @@ const minDate = new Date(today.setDate(today.getDate() + days));
 if (isNaN(selectedDate.getTime()) || selectedDate < minDate) {
 return { 
     futureDateInvalid: 
-    'La date doit être dans le futur, minimum ' + days +' joursà partir d\'aujourd\'hui.' 
+    'La date doit être dans le futur, minimum ' + days +
+    ' joursà partir d\'aujourd\'hui.' 
 }; }
 return null;
 }

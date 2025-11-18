@@ -100,6 +100,25 @@
     </div>
       </div>
 
+      <div formArrayName="domaines">
+    <label>Domaines</label>
+    <div *ngFor="let domainCtrl of domaines.controls; let i = index">
+      <input [formControlName]="i" />
+      <div *ngIf="domainCtrl.touched && domainCtrl.invalid">
+        <small *ngIf="domainCtrl.errors?.['required']"
+          >Le domaine est requis.</small
+        >
+        <small *ngIf="domainCtrl.errors?.['minlength']"
+          >Minimum 3 caractères.</small
+        >
+        <small *ngIf="domainCtrl.errors?.['maxlength']"
+          >Maximum 20 caractères.</small
+        >
+      </div>
+    </div>
+    <button type="button" (click)="addDomain()">Ajouter un domaine</button>
+  </div>
+  
     <!-- Boutons -->
     <div class="form-group mt-4">
       <button class="btn btn-primary" type="submit" [disabled]="eventform.invalid">
