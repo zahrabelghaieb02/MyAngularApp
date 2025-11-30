@@ -1,10 +1,9 @@
-# Projet Académique Angular  - Gestion d'Événements  Smail Chemlali
-
+# Projet Académique Angular - Gestion d'Évènements Zahra Belghaieb
 
 ## 📚 Contexte Académique
 
-Ce projet a été développé dans le cadre d'un projet académique encadré par **Madame Emna RBII**.
-
+**Projet réalisé par : Zahra Belghaieb**  
+Encadré par Madame Emna RBII
 L'objectif de ce projet est d'apprendre et de maîtriser les concepts fondamentaux d'Angular à travers la création d'une application de gestion d'événements.
 
 ## 🎯 Objectifs Pédagogiques
@@ -87,7 +86,7 @@ src/
 ## 👥 Équipe
 
 **Encadrant :** Madame Emna Rbii  
-**Développeur :** Smail Chemlali 
+**Développeur :** Zahra belghaieb 
 
 ## 📚 Ressources d'Apprentissage
 
